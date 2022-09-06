@@ -1,10 +1,12 @@
-import React from 'react'
-import './styles.css';
+import React from 'react';
+import './styles.scss';
 
-export const Button = ({text, onClick}) => {
+export const Button = ({ text, onClick }) => {
   return (
     <>
-      <button onClick={onClick} className='button'> {text} </button>
+      <button onClick={onClick} className="button">
+        {text}
+      </button>
     </>
-  )
-}
+  );
+};
