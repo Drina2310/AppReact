@@ -1,6 +1,6 @@
-import React from 'react'
-import AboutMe from '../../components/AboutMe/AboutMe'
-import { Contact } from '../../components/contact/Contact'
+import React from 'react';
+import AboutMe from '../../components/AboutMe/AboutMe';
+import { Contact } from '../../components/Contact/Contact';
 
 const Profile = () => {
   return (
@@ -8,7 +8,7 @@ const Profile = () => {
       <Contact />
       <AboutMe />
     </>
-  )
-}
+  );
+};
 
-export default Profile
+export default Profile;

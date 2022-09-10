@@ -8,6 +8,8 @@ const API_URL =
 const Game = () => {
   const [loading, setLoading] = useState(true);
   const [questions, setQuestions] = useState([]);
+  const [selectAnswers, setSelectAnswers] = useState([]);
+  const [result, setResult] = useState(0);
 
   useEffect(() => {
     fetch(API_URL)
@@ -21,14 +23,19 @@ const Game = () => {
 
   return (
     <div className="container">
-      <Breadcrumb />
+      <Breadcrumb isActive="game" />
       {loading && <div>Cargando...</div>}
 
       {!loading && (
         <form>
           {questions.map((question) => {
             return (
-              <QuestionCard key={question.id} currentQuestion={question} />
+              <QuestionCard
+                key={question.id}
+                currentQuestion={question}
+                selectAnswers={selectAnswers}
+                setSelectAnswers={setSelectAnswers}
+              />
             );
           })}
         </form>
