@@ -10,16 +10,9 @@ export const Home = () => {
   };
 
   return (
-    <section className="home d-flex justify-content-center align-items-center">
+    <section className="home d-flex justify-content-center align-items-end">
       <div className="d-flex flex-column">
-        <Button
-          text="MetCamp Quiz"
-          onClick={() => onCLickButtonClick('/game')}
-        />
-        <Button
-          text="Contacto"
-          onClick={() => onCLickButtonClick('/profile')}
-        />
+        <Button text="A Jugar" onClick={() => onCLickButtonClick('/game')} />
       </div>
     </section>
   );

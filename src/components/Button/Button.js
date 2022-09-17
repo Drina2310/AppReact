@@ -1,10 +1,10 @@
 import React from 'react';
 import './styles.scss';
 
-export const Button = ({ text, onClick }) => {
+export const Button = ({ text, onClick, disabled }) => {
   return (
     <>
-      <button onClick={onClick} className="button">
+      <button disabled={disabled} onClick={onClick} className="btn button">
         {text}
       </button>
     </>
