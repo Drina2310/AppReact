@@ -3,6 +3,7 @@ import { Breadcrumb } from '../../components/Breadcrumb/Breadcrumb';
 import { QuestionCard } from '../../components/QuestionCard/QuestionCard';
 import { Button } from '../../components/Button/Button';
 import './styles.scss';
+import { Result } from '../../components/Result/Result';
 
 const API_URL =
   'https://62bb6e36573ca8f83298fbef.mockapi.io/metcampweb22/v1/questions/harry-potter';
@@ -53,19 +54,20 @@ const Game = () => {
               );
             })}
           </form>
-          <div className="d-flex justify-content-end mb-3">
+          <div className="mb-3">
             {showResult && (
-              <p>
-                {result}/{questions.length}
-              </p>
+              <Result resultValue={result} totalQuestion={questions.length} />
             )}
-            <Button
-              text="Validar"
-              onClick={() => calculateResult()}
-              disabled={
-                selectAnswers?.length !== questions?.length || showResult
-              }
-            />
+
+            <div>
+              <Button
+                text="Validar"
+                onClick={() => calculateResult()}
+                disabled={
+                  selectAnswers?.length !== questions?.length || showResult
+                }
+              />
+            </div>
           </div>
         </>
       )}

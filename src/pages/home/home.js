@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { Button } from '../../components/Button/Button';
+import logo from '../../images/pngwing.com.png';
 import './styles.scss';
 
 export const Home = () => {
@@ -10,10 +11,16 @@ export const Home = () => {
   };
 
   return (
-    <section className="home d-flex justify-content-center align-items-end">
-      <div className="d-flex flex-column">
-        <Button text="A Jugar" onClick={() => onCLickButtonClick('/game')} />
-      </div>
-    </section>
+    <div className="home d-flex justify-content-center align-items-center">
+      <section>
+        <div className="logo">
+          <img src={logo} alt="logo" />
+        </div>
+
+        <div>
+          <Button text="A Jugar" onClick={() => onCLickButtonClick('/game')} />
+        </div>
+      </section>
+    </div>
   );
 };
